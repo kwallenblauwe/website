@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+つばめワークス｜IT WORKS
+</title>
+
+
+<style>
+
+/* ========================================
+   RESET
+======================================== */
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Noto Sans JP",
+    sans-serif;
+
+  color:#111;
+
+  background:#f4f4f0;
+
+  line-height:1.7;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.container{
+
+  width:min(1150px,92%);
+
+  margin:auto;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.neo-header{
+
+  height:80px;
+
+  position:absolute;
+
+  top:0;
+  left:0;
+
+  width:100%;
+
+  z-index:2000;
+}
+
+.neo-header-inner{
+
+  height:100%;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+}
+
+
+/* LOGO */
+
+.neo-logo{
+
+  font-size:25px;
+
+  font-weight:950;
+
+  line-height:1;
+
+  position:relative;
+
+  z-index:2200;
+}
+
+.neo-logo span{
+
+  background:#ffe500;
+
+  padding:3px 7px;
+
+  margin-left:3px;
+}
+
+
+/* ========================================
+   MENU BUTTON
+======================================== */
+
+.neo-menu-button{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  border:3px solid #111;
+
+  background:#ffe500;
+
+  padding:9px 12px;
+
+  cursor:pointer;
+
+  box-shadow:5px 5px 0 #111;
+
+  transition:.15s;
+
+  position:relative;
+
+  z-index:2200;
+}
+
+.neo-menu-button strong{
+
+  font-size:12px;
+
+  font-weight:950;
+}
+
+.neo-hamburger{
+
+  width:25px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:4px;
+}
+
+.neo-hamburger i{
+
+  display:block;
+
+  height:3px;
+
+  background:#111;
+
+  transition:.2s;
+}
+
+
+/* ACTIVE */
+
+.neo-menu-button.active{
+
+  transform:
+    translate(4px,4px);
+
+  box-shadow:
+    1px 1px 0 #111;
+}
+
+.neo-menu-button.active
+.neo-hamburger i:nth-child(1){
+
+  transform:
+    translateY(7px)
+    rotate(45deg);
+}
+
+.neo-menu-button.active
+.neo-hamburger i:nth-child(2){
+
+  opacity:0;
+}
+
+.neo-menu-button.active
+.neo-hamburger i:nth-child(3){
+
+  transform:
+    translateY(-7px)
+    rotate(-45deg);
+}
+
+
+/* ========================================
+   MENU OVERLAY
+======================================== */
+
+.neo-menu-overlay{
+
+  position:fixed;
+
+  inset:0;
+
+  background:#ffe500;
+
+  z-index:2100;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  opacity:0;
+
+  visibility:hidden;
+
+  transition:.25s;
+}
+
+.neo-menu-overlay.active{
+
+  opacity:1;
+
+  visibility:visible;
+}
+
+
+.neo-menu-content{
+
+  width:min(1050px,90%);
+}
+
+
+/* MENU TITLE */
+
+.neo-menu-title{
+
+  font-size:13px;
+
+  font-weight:950;
+
+  letter-spacing:.2em;
+
+  margin-bottom:25px;
+}
+
+
+/* NAV */
+
+.neo-menu-content nav{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:10px;
+}
+
+.neo-menu-content nav a{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:25px;
+
+  font-size:
+    clamp(42px,7vw,82px);
+
+  font-weight:950;
+
+  line-height:1.1;
+
+  border-bottom:4px solid #111;
+
+  padding:10px 0;
+
+  transition:.15s;
+}
+
+.neo-menu-content nav a span{
+
+  width:35px;
+
+  font-size:13px;
+}
+
+.neo-menu-content nav a:hover{
+
+  background:#1769ff;
+
+  color:#fff;
+
+  padding-left:20px;
+}
+
+.neo-menu-note{
+
+  margin-top:35px;
+
+  font-size:11px;
+
+  font-weight:900;
+
+  letter-spacing:.2em;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.neo-hero{
+
+  padding:
+    150px 0 100px;
+
+  background:#f4f4f0;
+}
+
+.neo-hero-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    1.05fr .95fr;
+
+  gap:50px;
+
+  align-items:center;
+}
+
+.neo-tag{
+
+  display:inline-block;
+
+  background:#1769ff;
+
+  color:#fff;
+
+  border:3px solid #111;
+
+  padding:5px 10px;
+
+  font-size:12px;
+
+  font-weight:900;
+
+  box-shadow:
+    4px 4px 0 #111;
+
+  margin-bottom:30px;
+}
+
+.neo-hero h1{
+
+  font-size:
+    clamp(50px,8vw,100px);
+
+  font-weight:950;
+
+  line-height:.95;
+
+  letter-spacing:-.06em;
+
+  margin-bottom:35px;
+}
+
+.neo-hero h1 span{
+
+  background:#ffe500;
+
+  padding:0 8px;
+}
+
+.neo-hero p{
+
+  max-width:520px;
+
+  font-size:17px;
+
+  margin-bottom:30px;
+}
+
+
+/* IMAGE */
+
+.neo-photo{
+
+  height:520px;
+
+  border:4px solid #111;
+
+  background:
+    linear-gradient(
+      135deg,
+      #bfe5ff,
+      #1769ff
+    );
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  color:#fff;
+
+  font-weight:900;
+
+  box-shadow:
+    12px 12px 0 #111;
+
+  transform:rotate(1deg);
+}
+
+
+/* ========================================
+   INTRO
+======================================== */
+
+.neo-intro{
+
+  background:#1769ff;
+
+  color:#fff;
+
+  border-top:4px solid #111;
+
+  border-bottom:4px solid #111;
+
+  padding:100px 0;
+}
+
+.neo-intro-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    1fr 2fr;
+
+  gap:60px;
+}
+
+.neo-intro h2{
+
+  font-size:14px;
+
+  font-weight:900;
+
+  letter-spacing:.2em;
+}
+
+.neo-intro p{
+
+  font-size:
+    clamp(25px,4vw,48px);
+
+  font-weight:900;
+
+  line-height:1.35;
+}
+
+
+/* ========================================
+   WORK
+======================================== */
+
+.neo-work{
+
+  padding:110px 0;
+}
+
+.neo-work-title{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:end;
+
+  margin-bottom:50px;
+}
+
+.neo-work-title h2{
+
+  font-size:
+    clamp(50px,8vw,100px);
+
+  font-weight:950;
+
+  line-height:.9;
+}
+
+.neo-work-title span{
+
+  font-size:12px;
+
+  font-weight:900;
+}
+
+
+/* GRID */
+
+.neo-work-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:18px;
+}
+
+.neo-work-card{
+
+  min-height:200px;
+
+  border:4px solid #111;
+
+  background:#fff;
+
+  padding:25px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:space-between;
+
+  box-shadow:
+    7px 7px 0 #111;
+
+  transition:.15s;
+}
+
+.neo-work-card:hover{
+
+  transform:
+    translate(4px,4px);
+
+  box-shadow:
+    3px 3px 0 #111;
+}
+
+.neo-work-card .number{
+
+  font-size:13px;
+
+  font-weight:900;
+}
+
+.neo-work-card h3{
+
+  font-size:22px;
+
+  font-weight:950;
+}
+
+
+/* ========================================
+   CTA
+======================================== */
+
+.neo-cta{
+
+  background:#ffe500;
+
+  border-top:4px solid #111;
+
+  border-bottom:4px solid #111;
+
+  padding:100px 20px;
+
+  text-align:center;
+}
+
+.neo-cta h2{
+
+  font-size:
+    clamp(35px,6vw,75px);
+
+  font-weight:950;
+
+  line-height:1;
+
+  margin-bottom:20px;
+}
+
+.neo-cta a{
+
+  display:inline-block;
+
+  margin-top:30px;
+
+  padding:16px 35px;
+
+  background:#111;
+
+  color:#fff;
+
+  border:3px solid #111;
+
+  font-weight:900;
+
+  box-shadow:
+    6px 6px 0 #1769ff;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.neo-footer{
+
+  background:#111;
+
+  color:#fff;
+
+  padding:45px 0;
+}
+
+.neo-footer-inner{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  font-size:12px;
+
+  font-weight:700;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media(max-width:768px){
+
+  .neo-header{
+    height:70px;
+  }
+
+  .neo-logo{
+    font-size:20px;
+  }
+
+  .neo-menu-button{
+    padding:8px 10px;
+  }
+
+  .neo-hero{
+
+    padding:
+      130px 0 80px;
+  }
+
+  .neo-hero-grid{
+
+    grid-template-columns:1fr;
+
+    gap:50px;
+  }
+
+  .neo-photo{
+
+    height:330px;
+
+    box-shadow:
+      8px 8px 0 #111;
+  }
+
+  .neo-intro-grid{
+
+    grid-template-columns:1fr;
+
+    gap:30px;
+  }
+
+  .neo-work{
+
+    padding:80px 0;
+  }
+
+  .neo-work-grid{
+
+    grid-template-columns:1fr;
+  }
+
+  .neo-work-card{
+
+    min-height:170px;
+  }
+
+  .neo-footer-inner{
+
+    display:block;
+  }
+
+  .neo-footer-inner span{
+
+    display:block;
+
+    margin-top:15px;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ========================================
+     HEADER
+======================================== -->
+
+<header class="neo-header">
+
+  <div class="container neo-header-inner">
+
+    <a
+      href="index.html"
+      class="neo-logo"
+    >
+
+      つばめ
+
+      <span>
+        WORKS
+      </span>
+
+    </a>
+
+
+    <button
+      class="neo-menu-button"
+      id="neoMenu"
+      aria-label="メニューを開く"
+      aria-expanded="false"
+    >
+
+      <strong>
+        MENU
+      </strong>
+
+      <div class="neo-hamburger">
+
+        <i></i>
+        <i></i>
+        <i></i>
+
+      </div>
+
+    </button>
+
+  </div>
+
+</header>
+
+
+<!-- ========================================
+     MENU
+======================================== -->
+
+<div
+  class="neo-menu-overlay"
+  id="neoOverlay"
+>
+
+  <div class="neo-menu-content">
+
+    <div class="neo-menu-title">
+      NAVIGATION
+    </div>
+
+    <nav>
+
+      <a href="index.html">
+
+        <span>01</span>
+
+        ホーム
+
+      </a>
+
+
+      <a href="about.html">
+
+        <span>02</span>
+
+        施設紹介
+
+      </a>
+
+
+      <a href="work.html">
+
+        <span>03</span>
+
+        作業内容
+
+      </a>
+
+
+      <a href="#contact">
+
+        <span>04</span>
+
+        お問い合わせ
+
+      </a>
+
+    </nav>
+
+
+    <div class="neo-menu-note">
+
+      IT × WORK × POSSIBILITY
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- ========================================
+     HERO
+======================================== -->
+
+<main>
+
+<section class="neo-hero">
+
+  <div class="container neo-hero-grid">
+
+    <div>
+
+      <div class="neo-tag">
+        IT WORK SUPPORT
+      </div>
+
+      <h1>
+
+        できるを<br>
+
+        <span>仕事</span>に。
+
+      </h1>
+
+      <p>
+
+        つばめワークスは、
+        Web制作・デザイン・動画編集・
+        AIアノテーションなど、
+        IT分野の仕事に取り組む
+        就労継続支援B型事業所です。
+
+      </p>
+
+    </div>
+
+
+    <div class="neo-photo">
+
+      FACILITY PHOTO
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ========================================
+     INTRO
+======================================== -->
+
+<section class="neo-intro">
+
+  <div class="container neo-intro-grid">
+
+    <h2>
+      ABOUT<br>
+      TSUBAME WORKS
+    </h2>
+
+    <p>
+
+      ITを学ぶだけではなく、
+      実際の仕事を通して、
+      自分の「できる」を
+      少しずつ増やしていく。
+
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- ========================================
+     WORK
+======================================== -->
+
+<section class="neo-work">
+
+  <div class="container">
+
+    <div class="neo-work-title">
+
+      <h2>
+        WORK
+      </h2>
+
+      <span>
+        WHAT WE DO
+      </span>
+
+    </div>
+
+
+    <div class="neo-work-grid">
+
+
+      <div class="neo-work-card">
+
+        <span class="number">
+          01
+        </span>
+
+        <h3>
+          Webサイト制作・コーディング
+        </h3>
+
+      </div>
+
+
+      <div class="neo-work-card">
+
+        <span class="number">
+          02
+        </span>
+
+        <h3>
+          デザイン
+        </h3>
+
+      </div>
+
+
+      <div class="neo-work-card">
+
+        <span class="number">
+          03
+        </span>
+
+        <h3>
+          動画編集
+        </h3>
+
+      </div>
+
+
+      <div class="neo-work-card">
+
+        <span class="number">
+          04
+        </span>
+
+        <h3>
+          データ入力・データ整備
+        </h3>
+
+      </div>
+
+
+      <div class="neo-work-card">
+
+        <span class="number">
+          05
+        </span>
+
+        <h3>
+          AIアノテーション
+        </h3>
+
+      </div>
+
+
+      <div class="neo-work-card">
+
+        <span class="number">
+          06
+        </span>
+
+        <h3>
+          プログラミング
+        </h3>
+
+      </div>
+
+
+      <div class="neo-work-card">
+
+        <span class="number">
+          07
+        </span>
+
+        <h3>
+          SNS運用サポート
+        </h3>
+
+      </div>
+
+
+      <div class="neo-work-card">
+
+        <span class="number">
+          08
+        </span>
+
+        <h3>
+          文字起こし・議事録
+        </h3>
+
+      </div>
+
+
+      <div class="neo-work-card">
+
+        <span class="number">
+          09
+        </span>
+
+        <h3>
+          EC商品登録・出品作業
+        </h3>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ========================================
+     CTA
+======================================== -->
+
+<section
+  class="neo-cta"
+  id="contact"
+>
+
+  <h2>
+    LET'S WORK<br>
+    TOGETHER.
+  </h2>
+
+  <p>
+    見学・ご相談・お仕事のご依頼
+  </p>
+
+  <a href="#">
+    お問い合わせ
+  </a>
+
+</section>
+
+</main>
+
+
+<!-- ========================================
+     FOOTER
+======================================== -->
+
+<footer class="neo-footer">
+
+  <div class="container neo-footer-inner">
+
+    <strong>
+      TSUBAME WORKS
+    </strong>
+
+    <span>
+      IT WORK SUPPORT / © 2026
+    </span>
+
+  </div>
+
+</footer>
+
+
+<!-- ========================================
+     JAVASCRIPT
+======================================== -->
+
+<script>
+
+const neoMenu =
+  document.getElementById(
+    "neoMenu"
+  );
+
+const neoOverlay =
+  document.getElementById(
+    "neoOverlay"
+  );
+
+
+neoMenu.addEventListener(
+  "click",
+  function(){
+
+    const open =
+      neoMenu.classList.toggle(
+        "active"
+      );
+
+    neoOverlay.classList.toggle(
+      "active"
+    );
+
+    neoMenu.setAttribute(
+      "aria-expanded",
+      open
+    );
+
+    neoMenu.setAttribute(
+      "aria-label",
+      open
+        ? "メニューを閉じる"
+        : "メニューを開く"
+    );
+
+  }
+);
+
+
+document
+  .querySelectorAll(
+    ".neo-menu-content nav a"
+  )
+  .forEach(function(link){
+
+    link.addEventListener(
+      "click",
+      function(){
+
+        neoMenu.classList.remove(
+          "active"
+        );
+
+        neoOverlay.classList.remove(
+          "active"
+        );
+
+        neoMenu.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+      }
+    );
+
+  });
+
+</script>
+
+
+</body>
+</html>

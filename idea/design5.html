@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>つばめワークス</title>
+
+<style>
+*{
+ box-sizing:border-box;
+ margin:0;
+ padding:0;
+}
+
+body{
+ font-family:"Noto Sans JP",sans-serif;
+ color:#27384a;
+ background:
+ radial-gradient(circle at 10% 10%,#dff4ff,transparent 30%),
+ radial-gradient(circle at 90% 20%,#e8e2ff,transparent 30%),
+ #f7fbff;
+ line-height:1.8;
+}
+
+a{
+ text-decoration:none;
+ color:inherit;
+}
+
+.container{
+ width:min(1100px,90%);
+ margin:auto;
+}
+
+header{
+ padding:20px 0;
+}
+
+.header-inner{
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+}
+
+.logo{
+ font-size:22px;
+ font-weight:800;
+}
+
+.logo span{
+ color:#6685bd;
+}
+
+nav{
+ display:flex;
+ gap:25px;
+ font-size:14px;
+}
+
+.hero{
+ padding:90px 0;
+}
+
+.hero-box{
+ padding:70px;
+ border:1px solid rgba(255,255,255,.8);
+ background:rgba(255,255,255,.45);
+ backdrop-filter:blur(20px);
+ border-radius:40px;
+ box-shadow:0 20px 60px rgba(80,120,160,.12);
+}
+
+.hero-grid{
+ display:grid;
+ grid-template-columns:1fr .9fr;
+ gap:50px;
+ align-items:center;
+}
+
+.hero h1{
+ font-size:clamp(40px,6vw,70px);
+ line-height:1.3;
+ letter-spacing:-.05em;
+}
+
+.hero h1 span{
+ color:#6685bd;
+}
+
+.hero p{
+ margin-top:25px;
+ color:#66798c;
+}
+
+.photo{
+ height:390px;
+ border-radius:30px;
+ background:linear-gradient(135deg,#bde5f6,#dcd5f6);
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ color:white;
+}
+
+.button{
+ display:inline-block;
+ margin-top:30px;
+ padding:13px 30px;
+ border-radius:50px;
+ background:#6685bd;
+ color:#fff;
+}
+
+section{
+ padding:80px 0;
+}
+
+.section-title{
+ text-align:center;
+ margin-bottom:45px;
+}
+
+.section-title h2{
+ font-size:34px;
+}
+
+.section-title p{
+ color:#718294;
+}
+
+.cards{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:20px;
+}
+
+.card{
+ padding:35px;
+ border-radius:25px;
+ background:rgba(255,255,255,.65);
+ border:1px solid rgba(255,255,255,.9);
+ box-shadow:0 15px 40px rgba(80,120,160,.08);
+}
+
+.card-icon{
+ width:55px;
+ height:55px;
+ border-radius:18px;
+ background:#e3f3fc;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ margin-bottom:20px;
+ font-size:22px;
+}
+
+.card h3{
+ margin-bottom:10px;
+}
+
+.card p{
+ color:#718294;
+ font-size:14px;
+}
+
+.work-area{
+ padding:80px 0;
+}
+
+.work-grid{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:15px;
+}
+
+.work{
+ padding:25px;
+ border-radius:20px;
+ background:#fff;
+ box-shadow:0 8px 30px rgba(70,100,140,.07);
+}
+
+.work span{
+ font-size:12px;
+ color:#6685bd;
+}
+
+.work h3{
+ margin-top:8px;
+}
+
+.cta{
+ text-align:center;
+ padding:90px 20px;
+}
+
+.cta-box{
+ background:linear-gradient(135deg,#d9eff9,#e6e0f8);
+ border-radius:40px;
+ padding:70px 30px;
+}
+
+.cta h2{
+ font-size:34px;
+}
+
+footer{
+ padding:35px 0;
+ color:#758595;
+ font-size:13px;
+}
+
+@media(max-width:768px){
+
+ nav{
+  display:none;
+ }
+
+ .hero{
+  padding:50px 0;
+ }
+
+ .hero-box{
+  padding:35px 25px;
+ }
+
+ .hero-grid{
+  grid-template-columns:1fr;
+ }
+
+ .photo{
+  height:280px;
+ }
+
+ .cards,
+ .work-grid{
+  grid-template-columns:1fr;
+ }
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container header-inner">
+
+<a href="index.html" class="logo">
+つばめ<span>ワークス</span>
+</a>
+
+<nav>
+<a href="about.html">施設紹介</a>
+<a href="work.html">作業内容</a>
+<a href="#contact">お問い合わせ</a>
+</nav>
+
+</div>
+</header>
+
+<main>
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-box">
+
+<div class="hero-grid">
+
+<div>
+
+<p>IT特化型 就労継続支援B型事業所</p>
+
+<h1>
+自分らしい<br>
+<span>働き方</span>を<br>
+見つけよう。
+</h1>
+
+<p>
+つばめワークスでは、
+ITを活用したさまざまな仕事を通じて、
+一人ひとりの「できる」を広げていきます。
+</p>
+
+<a href="about.html" class="button">
+つばめワークスについて
+</a>
+
+</div>
+
+<div class="photo">
+施設・活動写真
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+<h2>つばめワークスの特徴</h2>
+<p>安心してITの仕事に取り組める環境を。</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<div class="card-icon">✦</div>
+<h3>ITに特化</h3>
+<p>
+Web、デザイン、動画、AIなど、
+さまざまなIT分野に挑戦できます。
+</p>
+</div>
+
+<div class="card">
+<div class="card-icon">◌</div>
+<h3>自分のペース</h3>
+<p>
+一人ひとりの体調やスキルに合わせて
+無理なく取り組みます。
+</p>
+</div>
+
+<div class="card">
+<div class="card-icon">＋</div>
+<h3>経験を積む</h3>
+<p>
+実際の仕事を経験しながら、
+将来の働き方を考えていきます。
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="work-area">
+
+<div class="container">
+
+<div class="section-title">
+<h2>できる仕事</h2>
+<p>あなたの「やってみたい」が見つかるかもしれません。</p>
+</div>
+
+<div class="work-grid">
+
+<div class="work">
+<span>WEB</span>
+<h3>Web制作・コーディング</h3>
+</div>
+
+<div class="work">
+<span>DESIGN</span>
+<h3>デザイン</h3>
+</div>
+
+<div class="work">
+<span>MOVIE</span>
+<h3>動画編集</h3>
+</div>
+
+<div class="work">
+<span>DATA</span>
+<h3>データ入力・整備</h3>
+</div>
+
+<div class="work">
+<span>AI</span>
+<h3>AIアノテーション</h3>
+</div>
+
+<div class="work">
+<span>PROGRAM</span>
+<h3>プログラミング</h3>
+</div>
+
+<div class="work">
+<span>SNS</span>
+<h3>SNS運用サポート</h3>
+</div>
+
+<div class="work">
+<span>EC</span>
+<h3>EC商品登録</h3>
+</div>
+
+<div class="work">
+<span>TEXT</span>
+<h3>文字起こし・議事録</h3>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="cta" id="contact">
+
+<div class="container">
+
+<div class="cta-box">
+
+<h2>まずは気軽にご相談ください。</h2>
+
+<p>
+見学・体験利用・お仕事のご依頼など、
+お気軽にお問い合わせください。
+</p>
+
+<a href="#" class="button">お問い合わせ</a>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+<div class="container">
+つばめワークス｜IT特化型 就労継続支援B型事業所
+</div>
+</footer>
+
+</body>
+</html>

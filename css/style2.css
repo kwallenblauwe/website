@@ -1,0 +1,804 @@
+
+/* ========================================
+   RESET
+======================================== */
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Noto Sans JP",
+    sans-serif;
+
+  color:#17324d;
+
+  line-height:1.8;
+
+  background:#fff;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.container{
+  width:min(1120px,90%);
+  margin:auto;
+}
+
+
+/* ========================================
+   HEADER
+   index.html と共通
+======================================== */
+
+.site-header{
+  height:76px;
+  background:#fff;
+  border-bottom:1px solid #e5edf4;
+  position:relative;
+  z-index:1000;
+}
+
+.header-inner{
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+
+/* LOGO */
+
+.logo{
+  font-size:22px;
+  font-weight:800;
+  color:#1476c6;
+}
+
+.logo span{
+  display:block;
+  font-size:10px;
+  letter-spacing:2px;
+  color:#8294a6;
+}
+
+
+/* ========================================
+   HAMBURGER
+======================================== */
+
+.menu-toggle{
+  width:46px;
+  height:46px;
+
+  border:1px solid #dce7ef;
+
+  background:#fff;
+
+  border-radius:50%;
+
+  display:flex;
+  flex-direction:column;
+
+  justify-content:center;
+  align-items:center;
+
+  gap:5px;
+
+  cursor:pointer;
+
+  transition:.25s;
+
+  position:relative;
+
+  z-index:1100;
+}
+
+.menu-toggle:hover{
+  background:#edf7ff;
+}
+
+.menu-toggle span{
+  width:19px;
+  height:2px;
+
+  background:#17324d;
+
+  display:block;
+
+  transition:.3s;
+}
+
+
+/* OPEN */
+
+.menu-toggle.active span:nth-child(1){
+  transform:
+    translateY(7px)
+    rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2){
+  opacity:0;
+}
+
+.menu-toggle.active span:nth-child(3){
+  transform:
+    translateY(-7px)
+    rotate(-45deg);
+}
+
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+.global-nav{
+  position:fixed;
+
+  top:0;
+  right:0;
+
+  width:100%;
+  height:100vh;
+
+  background:#fff;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+
+  align-items:center;
+
+  gap:32px;
+
+  opacity:0;
+
+  visibility:hidden;
+
+  transform:translateY(-15px);
+
+  transition:
+    opacity .3s ease,
+    visibility .3s ease,
+    transform .3s ease;
+
+  z-index:1050;
+}
+
+.global-nav.active{
+  opacity:1;
+
+  visibility:visible;
+
+  transform:translateY(0);
+}
+
+.global-nav a{
+  font-size:22px;
+
+  font-weight:700;
+
+  color:#17324d;
+
+  transition:.2s;
+}
+
+.global-nav a:hover{
+  color:#1476c6;
+}
+
+
+/* ========================================
+   PAGE HERO
+======================================== */
+
+.page-hero{
+  background:#edf7ff;
+
+  padding:
+    70px 0 80px;
+}
+
+.page-hero-title{
+  text-align:center;
+
+  margin-bottom:45px;
+}
+
+.page-hero-title small{
+  color:#1476c6;
+
+  font-weight:bold;
+
+  letter-spacing:2px;
+}
+
+.page-hero-title h1{
+  font-size:
+    clamp(32px,5vw,54px);
+
+  line-height:1.4;
+
+  margin-top:8px;
+}
+
+.page-hero-title p{
+  color:#607487;
+
+  margin-top:15px;
+}
+
+
+/* ========================================
+   FACILITY IMAGE
+======================================== */
+
+.facility-image{
+  width:100%;
+
+  height:
+    clamp(280px,45vw,520px);
+
+  border-radius:24px;
+
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #cfeaff,
+      #8cc9f2
+    );
+
+  position:relative;
+}
+
+.facility-image img{
+  width:100%;
+  height:100%;
+
+  display:block;
+
+  object-fit:cover;
+
+  object-position:center;
+}
+
+
+/* ========================================
+   SECTION
+======================================== */
+
+section{
+  padding:90px 0;
+}
+
+.section-title{
+  text-align:center;
+
+  margin-bottom:50px;
+}
+
+.section-title small{
+  color:#1476c6;
+
+  font-weight:bold;
+
+  letter-spacing:2px;
+}
+
+.section-title h2{
+  font-size:
+    clamp(28px,4vw,36px);
+
+  margin-top:8px;
+}
+
+.section-title p{
+  color:#607487;
+
+  font-size:15px;
+
+  margin-top:10px;
+}
+
+
+/* ========================================
+   FACILITY FEATURES
+======================================== */
+
+.facility-features{
+  background:#fff;
+}
+
+.feature-grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(2,1fr);
+
+  gap:24px;
+}
+
+.feature-card{
+  border:1px solid #e1ebf3;
+
+  border-radius:18px;
+
+  padding:35px;
+
+  background:#fff;
+
+  transition:.25s;
+}
+
+.feature-card:hover{
+  transform:translateY(-5px);
+
+  box-shadow:
+    0 15px 35px
+    rgba(30,80,120,.08);
+}
+
+
+/* NUMBER */
+
+.feature-number{
+  display:block;
+
+  font-size:14px;
+
+  font-weight:800;
+
+  color:#1476c6;
+
+  letter-spacing:2px;
+
+  margin-bottom:8px;
+}
+
+
+/* TITLE */
+
+.feature-card h3{
+  font-size:23px;
+
+  margin-bottom:8px;
+}
+
+
+/* DESCRIPTION */
+
+.feature-lead{
+  color:#607487;
+
+  margin-bottom:20px;
+
+  font-size:14px;
+}
+
+
+/* LIST */
+
+.feature-card ul{
+  list-style:none;
+}
+
+.feature-card li{
+  position:relative;
+
+  padding-left:20px;
+
+  margin-bottom:7px;
+
+  font-size:14px;
+
+  color:#435b70;
+}
+
+.feature-card li::before{
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  top:.75em;
+
+  width:7px;
+  height:7px;
+
+  border-radius:50%;
+
+  background:#1476c6;
+}
+
+
+/* ========================================
+   FACILITY SUMMARY
+======================================== */
+
+.facility-summary{
+  background:#f5f9fc;
+}
+
+.summary-layout{
+  display:grid;
+
+  grid-template-columns:
+    1fr 1.6fr;
+
+  gap:60px;
+
+  align-items:start;
+}
+
+
+/* LEFT */
+
+.summary-heading small{
+  color:#1476c6;
+
+  font-weight:bold;
+
+  letter-spacing:2px;
+}
+
+.summary-heading h2{
+  font-size:
+    clamp(28px,4vw,38px);
+
+  line-height:1.4;
+
+  margin-top:8px;
+}
+
+.summary-heading p{
+  color:#607487;
+
+  margin-top:15px;
+
+  font-size:14px;
+}
+
+
+/* TABLE */
+
+.info-table{
+  width:100%;
+
+  border-collapse:collapse;
+
+  background:#fff;
+
+  border-radius:16px;
+
+  overflow:hidden;
+
+  border:1px solid #e1ebf3;
+}
+
+.info-table tr{
+  border-bottom:1px solid #e8eff4;
+}
+
+.info-table tr:last-child{
+  border-bottom:none;
+}
+
+.info-table th{
+  width:30%;
+
+  text-align:left;
+
+  padding:18px 20px;
+
+  background:#edf7ff;
+
+  color:#17324d;
+
+  font-size:14px;
+
+  font-weight:700;
+
+  vertical-align:top;
+}
+
+.info-table td{
+  padding:18px 20px;
+
+  color:#536b80;
+
+  font-size:14px;
+
+  background:#fff;
+
+  vertical-align:top;
+}
+
+
+/* ========================================
+   ACCESS
+======================================== */
+
+.access{
+  background:#fff;
+}
+
+.access-box{
+  margin-top:50px;
+
+  display:grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap:24px;
+}
+
+.access-map{
+  min-height:300px;
+
+  border-radius:18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #dceefa,
+      #c4e2f5
+    );
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  color:#607487;
+
+  font-weight:bold;
+}
+
+.access-detail{
+  border:1px solid #e1ebf3;
+
+  border-radius:18px;
+
+  padding:30px;
+}
+
+.access-detail h3{
+  font-size:20px;
+
+  margin-bottom:15px;
+
+  color:#17324d;
+}
+
+.access-detail p{
+  color:#607487;
+
+  font-size:14px;
+
+  margin-bottom:15px;
+}
+
+
+/* ========================================
+   CTA
+======================================== */
+
+.cta{
+  background:#1476c6;
+
+  color:#fff;
+
+  text-align:center;
+
+  padding:80px 20px;
+}
+
+.cta h2{
+  font-size:
+    clamp(25px,4vw,32px);
+
+  margin-bottom:15px;
+}
+
+.cta p{
+  opacity:.9;
+}
+
+.cta .btn{
+  display:inline-block;
+
+  margin-top:20px;
+
+  padding:14px 30px;
+
+  border-radius:50px;
+
+  background:#fff;
+
+  color:#1476c6;
+
+  font-weight:bold;
+
+  transition:.2s;
+}
+
+.cta .btn:hover{
+  transform:translateY(-2px);
+}
+
+
+/* ========================================
+   FOOTER
+   index.html と共通
+======================================== */
+
+footer{
+  background:#122b40;
+
+  color:#cbd8e2;
+
+  padding:40px 0;
+}
+
+footer .container{
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+}
+
+footer small{
+  font-size:12px;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media(max-width:900px){
+
+  .summary-layout{
+    grid-template-columns:1fr;
+
+    gap:35px;
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media(max-width:768px){
+
+  .site-header{
+    height:70px;
+  }
+
+  .logo{
+    font-size:20px;
+  }
+
+
+  .page-hero{
+    padding:
+      50px 0 60px;
+  }
+
+
+  .facility-image{
+    height:
+      clamp(240px,65vw,360px);
+
+    border-radius:18px;
+  }
+
+
+  section{
+    padding:65px 0;
+  }
+
+
+  .feature-grid{
+    grid-template-columns:1fr;
+
+    gap:18px;
+  }
+
+
+  .feature-card{
+    padding:27px;
+  }
+
+
+  .feature-card h3{
+    font-size:21px;
+  }
+
+
+  .access-box{
+    grid-template-columns:1fr;
+
+    margin-top:35px;
+  }
+
+
+  .access-map{
+    min-height:240px;
+  }
+
+
+  .info-table th{
+    width:34%;
+
+    padding:
+      14px 12px;
+
+    font-size:12px;
+  }
+
+  .info-table td{
+    padding:
+      14px 12px;
+
+    font-size:13px;
+  }
+
+
+  footer .container{
+    display:block;
+  }
+
+
+  footer small{
+    display:block;
+
+    margin-top:20px;
+  }
+
+}
+
+
+/* ========================================
+   VERY SMALL SCREEN
+======================================== */
+
+@media(max-width:400px){
+
+  .container{
+    width:92%;
+  }
+
+
+  .feature-card{
+    padding:23px;
+  }
+
+
+  .info-table th{
+    width:36%;
+  }
+
+}

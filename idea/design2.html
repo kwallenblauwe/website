@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>つばめワークス｜あなたらしく、ITと働く</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP",sans-serif;
+color:#30485d;background:#f8fbfd;line-height:1.9
+}
+.container{width:min(1080px,90%);margin:auto}
+a{text-decoration:none;color:inherit}
+
+header{background:#fff;padding:20px 0}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:24px;font-weight:800;color:#1878bd}
+nav{display:flex;gap:28px;font-size:14px}
+
+.hero{padding:50px 0 80px}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:60px}
+.hero h1{font-size:46px;line-height:1.5;margin:15px 0}
+.hero h1 span{color:#2185c5}
+.hero p{color:#60788b}
+.photo{
+height:450px;border-radius:45% 45% 20px 20px;
+background:linear-gradient(150deg,#cdeeff,#91ccef);
+display:flex;align-items:center;justify-content:center;color:white
+}
+
+.section{padding:85px 0}
+.section-title{text-align:center;margin-bottom:45px}
+.section-title h2{font-size:32px}
+.section-title p{color:#728797}
+
+.features{
+display:grid;grid-template-columns:repeat(3,1fr);gap:25px
+}
+.feature{
+background:white;border-radius:25px;padding:35px;
+box-shadow:0 8px 30px rgba(40,100,140,.08)
+}
+.number{color:#1981c5;font-size:14px;font-weight:bold}
+.feature h3{margin:10px 0}
+
+.message{
+background:#eaf6ff;border-radius:35px;padding:60px
+}
+.message-grid{
+display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center
+}
+.message h2{font-size:30px;margin-bottom:20px}
+.message-img{
+height:300px;border-radius:25px;background:#b9e0f7;
+display:flex;align-items:center;justify-content:center;color:white
+}
+
+.work-list{
+display:grid;grid-template-columns:repeat(3,1fr);gap:15px
+}
+.work-list div{
+background:white;border-radius:12px;padding:20px;
+border:1px solid #e3edf3
+}
+
+.cta{
+margin-top:40px;background:#197dc0;color:white;
+padding:70px 20px;text-align:center
+}
+.cta h2{font-size:30px}
+.btn{
+display:inline-block;margin-top:25px;
+background:white;color:#197dc0;
+padding:14px 35px;border-radius:50px;font-weight:bold
+}
+
+footer{background:#263e52;color:white;padding:35px 0}
+
+@media(max-width:768px){
+nav{display:none}
+.hero-grid,.message-grid{grid-template-columns:1fr}
+.hero h1{font-size:34px}
+.photo{height:300px}
+.features,.work-list{grid-template-columns:1fr}
+.message{padding:30px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container header-inner">
+<div class="logo">つばめワークス</div>
+<nav>
+<a href="about.html">施設紹介</a>
+<a href="work.html">作業内容</a>
+<a href="#contact">お問い合わせ</a>
+</nav>
+</div>
+</header>
+
+<section class="hero">
+<div class="container hero-grid">
+
+<div>
+<p>IT特化型 就労継続支援B型事業所</p>
+<h1>あなたらしく、<br><span>ITと働く。</span></h1>
+<p>
+「パソコンが好き」「ITの仕事をしてみたい」
+そんな気持ちから始められる場所です。
+</p>
+</div>
+
+<div class="photo">利用者・スタッフの写真</div>
+
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<div class="section-title">
+<h2>つばめワークスの3つの特徴</h2>
+<p>一人ひとりの「やってみたい」を大切にします。</p>
+</div>
+
+<div class="features">
+
+<div class="feature">
+<span class="number">01</span>
+<h3>ITを学べる</h3>
+<p>Web制作、デザイン、動画編集、プログラミングなど、幅広いIT作業に挑戦できます。</p>
+</div>
+
+<div class="feature">
+<span class="number">02</span>
+<h3>自分のペースで</h3>
+<p>その日の体調や得意なことを考えながら、自分に合った働き方を探していきます。</p>
+</div>
+
+<div class="feature">
+<span class="number">03</span>
+<h3>スタッフがサポート</h3>
+<p>分からないことを一緒に確認しながら、少しずつできることを増やします。</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container message">
+<div class="message-grid">
+<div>
+<h2>「好き」を仕事に<br>近づけていく。</h2>
+<p>
+ITの世界には、さまざまな仕事があります。
+得意なこと、興味のあることを見つけながら、
+あなたに合った仕事を一緒に探していきます。
+</p>
+</div>
+<div class="message-img">活動風景写真</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<div class="section-title">
+<h2>できる仕事</h2>
+</div>
+
+<div class="work-list">
+<div>Web制作・コーディング</div>
+<div>デザイン</div>
+<div>動画編集</div>
+<div>データ入力・整備</div>
+<div>AIアノテーション</div>
+<div>文字起こし</div>
+<div>プログラミング</div>
+<div>SNS運用</div>
+<div>EC商品登録</div>
+</div>
+
+</div>
+</section>
+
+<section class="cta" id="contact">
+<h2>まずは見学・相談から。</h2>
+<p>「自分にもできるかな？」という段階でも大丈夫です。</p>
+<a href="#" class="btn">見学・お問い合わせ</a>
+</section>
+
+<footer>
+<div class="container">
+<strong>つばめワークス</strong>
+<p>IT特化型 就労継続支援B型事業所</p>
+</div>
+</footer>
+
+</body>
+</html>
