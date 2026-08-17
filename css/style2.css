@@ -1,4 +1,3 @@
-
 /* ========================================
    RESET
 ======================================== */
@@ -53,7 +52,9 @@ a{
 
 .header-inner{
   height:100%;
+
   display:flex;
+
   align-items:center;
   justify-content:space-between;
 }
@@ -63,14 +64,19 @@ a{
 
 .logo{
   font-size:22px;
+
   font-weight:800;
+
   color:#1476c6;
 }
 
 .logo span{
   display:block;
+
   font-size:10px;
+
   letter-spacing:2px;
+
   color:#8294a6;
 }
 
@@ -90,6 +96,7 @@ a{
   border-radius:50%;
 
   display:flex;
+
   flex-direction:column;
 
   justify-content:center;
@@ -539,6 +546,12 @@ section{
   background:#fff;
 }
 
+
+/*
+  地図とアクセス情報を
+  PCでは横並びにします。
+*/
+
 .access-box{
   margin-top:50px;
 
@@ -548,12 +561,33 @@ section{
     1fr 1fr;
 
   gap:24px;
+
+  width:100%;
 }
 
+
+/* ========================================
+   GOOGLE MAP
+======================================== */
+
 .access-map{
-  min-height:300px;
+  width:100%;
+
+  /*
+    地図の縦横比を固定。
+
+    PCでは横長、
+    画面が狭くなると
+    幅に合わせて高さも縮小します。
+  */
+
+  aspect-ratio:4 / 3;
+
+  min-width:0;
 
   border-radius:18px;
+
+  overflow:hidden;
 
   background:
     linear-gradient(
@@ -562,23 +596,60 @@ section{
       #c4e2f5
     );
 
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  color:#607487;
-
-  font-weight:bold;
+  position:relative;
 }
 
+
+/*
+  Google Maps iframe
+
+  HTML側に width="600"
+  height="450" があっても
+  CSS側で上書きします。
+*/
+
+.access-map iframe{
+  display:block;
+
+  width:100% !important;
+
+  height:100% !important;
+
+  max-width:100%;
+
+  min-width:0;
+
+  border:0;
+
+  position:absolute;
+
+  top:0;
+  left:0;
+}
+
+
+/* ========================================
+   ACCESS DETAIL
+======================================== */
+
 .access-detail{
+  width:100%;
+
+  min-width:0;
+
   border:1px solid #e1ebf3;
 
   border-radius:18px;
 
   padding:30px;
+
+  background:#fff;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
 }
 
 .access-detail h3{
@@ -595,6 +666,8 @@ section{
   font-size:14px;
 
   margin-bottom:15px;
+
+  word-break:break-word;
 }
 
 
@@ -684,6 +757,33 @@ footer small{
     gap:35px;
   }
 
+
+  /*
+    タブレットでは
+    地図と詳細を縦並びにします。
+  */
+
+  .access-box{
+    grid-template-columns:1fr;
+
+    gap:24px;
+  }
+
+
+  .access-map{
+    /*
+      幅100%に合わせて
+      高さも自動的に縮小
+    */
+
+    aspect-ratio:16 / 9;
+  }
+
+
+  .access-detail{
+    padding:30px;
+  }
+
 }
 
 
@@ -738,15 +838,76 @@ footer small{
   }
 
 
+  /*
+    ACCESS
+    スマートフォンでは
+    完全に1カラム
+  */
+
   .access-box{
+    width:100%;
+
     grid-template-columns:1fr;
+
+    gap:20px;
 
     margin-top:35px;
   }
 
 
+  /*
+    地図の高さを
+    スマートフォンの横幅に
+    合わせて縮小
+  */
+
   .access-map{
-    min-height:240px;
+    width:100%;
+
+    aspect-ratio:4 / 3;
+
+    min-height:0;
+
+    border-radius:14px;
+  }
+
+
+  /*
+    iframeも親要素に
+    完全追従
+  */
+
+  .access-map iframe{
+    width:100% !important;
+
+    height:100% !important;
+
+    max-width:100%;
+  }
+
+
+  .access-detail{
+    width:100%;
+
+    padding:25px;
+
+    border-radius:14px;
+  }
+
+
+  .access-detail h3{
+    font-size:19px;
+
+    margin-bottom:12px;
+  }
+
+
+  .access-detail p{
+    font-size:13px;
+
+    line-height:1.8;
+
+    margin-bottom:12px;
   }
 
 
@@ -794,6 +955,34 @@ footer small{
 
   .feature-card{
     padding:23px;
+  }
+
+
+  /*
+    小さいスマートフォンでは
+    地図をさらに横長にして
+    縦方向の占有量を減らします。
+  */
+
+  .access-map{
+    aspect-ratio:16 / 10;
+
+    border-radius:12px;
+  }
+
+
+  .access-detail{
+    padding:20px;
+  }
+
+
+  .access-detail h3{
+    font-size:18px;
+  }
+
+
+  .access-detail p{
+    font-size:12px;
   }
 
 
