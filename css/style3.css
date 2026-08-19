@@ -160,7 +160,7 @@
 
 
 /* ========================================
-   RESPONSIVE (TABLET)
+   WORK RESPONSIVE
 ======================================== */
 
 @media (max-width: 900px) {
@@ -172,11 +172,6 @@
     grid-template-columns: 1fr;
   }
 }
-
-
-/* ========================================
-   RESPONSIVE (MOBILE)
-======================================== */
 
 @media (max-width: 768px) {
   .work-section {
@@ -232,11 +227,6 @@
     font-size: 13px;
   }
 }
-
-
-/* ========================================
-   RESPONSIVE (VERY SMALL)
-======================================== */
 
 @media (max-width: 400px) {
   .work-meta {
