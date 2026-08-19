@@ -1,244 +1,9 @@
-
 /* ========================================
-   RESET
+   PAGE HERO OVERRIDE
 ======================================== */
 
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Noto Sans JP",
-    sans-serif;
-
-  color:#17324d;
-
-  line-height:1.8;
-
-  background:#fff;
-}
-
-a{
-  text-decoration:none;
-  color:inherit;
-}
-
-.container{
-  width:min(1120px,90%);
-  margin:auto;
-}
-
-
-/* ========================================
-   HEADER
-   index.html / about.html と共通
-======================================== */
-
-.site-header{
-  height:76px;
-  background:#fff;
-  border-bottom:1px solid #e5edf4;
-  position:relative;
-  z-index:1000;
-}
-
-.header-inner{
-  height:100%;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-
-
-/* LOGO */
-
-.logo{
-  font-size:22px;
-  font-weight:800;
-  color:#1476c6;
-}
-
-.logo span{
-  display:block;
-  font-size:10px;
-  letter-spacing:2px;
-  color:#8294a6;
-}
-
-
-/* ========================================
-   HAMBURGER
-======================================== */
-
-.menu-toggle{
-  width:46px;
-  height:46px;
-
-  border:1px solid #dce7ef;
-
-  background:#fff;
-
-  border-radius:50%;
-
-  display:flex;
-  flex-direction:column;
-
-  justify-content:center;
-  align-items:center;
-
-  gap:5px;
-
-  cursor:pointer;
-
-  transition:.25s;
-
-  position:relative;
-
-  z-index:1100;
-}
-
-.menu-toggle:hover{
-  background:#edf7ff;
-}
-
-.menu-toggle span{
-  width:19px;
-  height:2px;
-
-  background:#17324d;
-
-  display:block;
-
-  transition:.3s;
-}
-
-
-/* OPEN */
-
-.menu-toggle.active span:nth-child(1){
-  transform:
-    translateY(7px)
-    rotate(45deg);
-}
-
-.menu-toggle.active span:nth-child(2){
-  opacity:0;
-}
-
-.menu-toggle.active span:nth-child(3){
-  transform:
-    translateY(-7px)
-    rotate(-45deg);
-}
-
-
-/* ========================================
-   NAVIGATION
-======================================== */
-
-.global-nav{
-  position:fixed;
-
-  top:0;
-  right:0;
-
-  width:100%;
-  height:100vh;
-
-  background:#fff;
-
-  display:flex;
-
-  flex-direction:column;
-
-  justify-content:center;
-
-  align-items:center;
-
-  gap:32px;
-
-  opacity:0;
-
-  visibility:hidden;
-
-  transform:translateY(-15px);
-
-  transition:
-    opacity .3s ease,
-    visibility .3s ease,
-    transform .3s ease;
-
-  z-index:1050;
-}
-
-.global-nav.active{
-  opacity:1;
-
-  visibility:visible;
-
-  transform:translateY(0);
-}
-
-.global-nav a{
-  font-size:22px;
-
-  font-weight:700;
-
-  color:#17324d;
-
-  transition:.2s;
-}
-
-.global-nav a:hover{
-  color:#1476c6;
-}
-
-
-/* ========================================
-   PAGE HERO
-======================================== */
-
-.page-hero{
-  background:#edf7ff;
-
-  padding:
-    70px 0 75px;
-}
-
-.page-hero-title{
-  text-align:center;
-}
-
-.page-hero-title small{
-  color:#1476c6;
-
-  font-weight:bold;
-
-  letter-spacing:2px;
-}
-
-.page-hero-title h1{
-  font-size:
-    clamp(32px,5vw,54px);
-
-  line-height:1.4;
-
-  margin-top:8px;
-}
-
-.page-hero-title p{
-  color:#607487;
-
-  margin-top:15px;
+.page-hero {
+  padding: 70px 0 75px;
 }
 
 
@@ -246,8 +11,8 @@ a{
    WORK SECTION
 ======================================== */
 
-.work-section{
-  padding:90px 0;
+.work-section {
+  padding: 90px 0;
 }
 
 
@@ -255,27 +20,21 @@ a{
    WORK ITEM
 ======================================== */
 
-.work-detail{
-  display:grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
-  gap:60px;
-
-  align-items:center;
-
-  padding:70px 0;
-
-  border-bottom:1px solid #e1ebf3;
+.work-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  padding: 70px 0;
+  border-bottom: 1px solid #e1ebf3;
 }
 
-.work-detail:first-child{
-  padding-top:0;
+.work-detail:first-child {
+  padding-top: 0;
 }
 
-.work-detail:last-child{
-  border-bottom:none;
+.work-detail:last-child {
+  border-bottom: none;
 }
 
 
@@ -283,60 +42,33 @@ a{
    WORK IMAGE
 ======================================== */
 
-.work-image{
-  width:100%;
-
-  aspect-ratio:4 / 3;
-
-  border-radius:22px;
-
-  overflow:hidden;
-
-  background:
-    linear-gradient(
-      135deg,
-      #cfeaff,
-      #8cc9f2
-    );
-
-  position:relative;
+.work-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 22px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #cfeaff, #8cc9f2);
+  position: relative;
 }
 
-.work-image img{
-  width:100%;
-  height:100%;
-
-  display:block;
-
-  object-fit:cover;
-
-  object-position:center;
+.work-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
 }
 
-
-/*
-  画像がない場合の
-  プレースホルダー
-*/
-
-.work-image-placeholder{
-  position:absolute;
-
-  inset:0;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  color:#fff;
-
-  font-size:14px;
-
-  font-weight:bold;
-
-  pointer-events:none;
+.work-image-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  pointer-events: none;
 }
 
 
@@ -344,50 +76,30 @@ a{
    WORK CONTENT
 ======================================== */
 
-.work-content{
-  padding:10px 0;
+.work-content {
+  padding: 10px 0;
 }
 
-
-/* NUMBER */
-
-.work-number{
-  display:block;
-
-  color:#1476c6;
-
-  font-size:14px;
-
-  font-weight:800;
-
-  letter-spacing:2px;
-
-  margin-bottom:8px;
+.work-number {
+  display: block;
+  color: #1476c6;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
 }
 
-
-/* TITLE */
-
-.work-content h2{
-  font-size:
-    clamp(26px,3vw,36px);
-
-  line-height:1.4;
-
-  margin-bottom:15px;
+.work-content h2 {
+  font-size: clamp(26px, 3vw, 36px);
+  line-height: 1.4;
+  margin-bottom: 15px;
 }
 
-
-/* DESCRIPTION */
-
-.work-description{
-  color:#536b80;
-
-  font-size:15px;
-
-  line-height:2;
-
-  margin-bottom:25px;
+.work-description {
+  color: #536b80;
+  font-size: 15px;
+  line-height: 2;
+  margin-bottom: 25px;
 }
 
 
@@ -395,51 +107,35 @@ a{
    WORK META
 ======================================== */
 
-.work-meta{
-  display:grid;
-
-  grid-template-columns:
-    repeat(3,1fr);
-
-  gap:10px;
-
-  margin-bottom:25px;
+.work-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 25px;
 }
 
-.meta-item{
-  background:#f5f9fc;
-
-  border:1px solid #e1ebf3;
-
-  border-radius:10px;
-
-  padding:13px 12px;
+.meta-item {
+  background: #f5f9fc;
+  border: 1px solid #e1ebf3;
+  border-radius: 10px;
+  padding: 13px 12px;
 }
 
-.meta-label{
-  display:block;
-
-  color:#1476c6;
-
-  font-size:10px;
-
-  font-weight:800;
-
-  letter-spacing:1.5px;
-
-  margin-bottom:3px;
+.meta-label {
+  display: block;
+  color: #1476c6;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 3px;
 }
 
-.meta-value{
-  display:block;
-
-  color:#17324d;
-
-  font-size:13px;
-
-  font-weight:700;
-
-  line-height:1.5;
+.meta-value {
+  display: block;
+  color: #17324d;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
 }
 
 
@@ -447,259 +143,111 @@ a{
    RESULT
 ======================================== */
 
-.work-result{
-  border-left:3px solid #1476c6;
-
-  padding-left:18px;
-
-  color:#536b80;
-
-  font-size:14px;
-
-  line-height:1.8;
+.work-result {
+  border-left: 3px solid #1476c6;
+  padding-left: 18px;
+  color: #536b80;
+  font-size: 14px;
+  line-height: 1.8;
 }
 
-.work-result strong{
-  display:block;
-
-  color:#17324d;
-
-  margin-bottom:4px;
-
-  font-size:13px;
+.work-result strong {
+  display: block;
+  color: #17324d;
+  margin-bottom: 4px;
+  font-size: 13px;
 }
 
 
 /* ========================================
-   CTA
+   RESPONSIVE (TABLET)
 ======================================== */
 
-.cta{
-  background:#1476c6;
+@media (max-width: 900px) {
+  .work-detail {
+    gap: 35px;
+  }
 
-  color:#fff;
-
-  text-align:center;
-
-  padding:80px 20px;
-}
-
-.cta h2{
-  font-size:
-    clamp(25px,4vw,32px);
-
-  margin-bottom:15px;
-}
-
-.cta p{
-  opacity:.9;
-}
-
-.cta .btn{
-  display:inline-block;
-
-  margin-top:20px;
-
-  padding:14px 30px;
-
-  border-radius:50px;
-
-  background:#fff;
-
-  color:#1476c6;
-
-  font-weight:bold;
-
-  transition:.2s;
-}
-
-.cta .btn:hover{
-  transform:translateY(-2px);
+  .work-meta {
+    grid-template-columns: 1fr;
+  }
 }
 
 
 /* ========================================
-   FOOTER
-   index.html / about.html と共通
+   RESPONSIVE (MOBILE)
 ======================================== */
 
-footer{
-  background:#122b40;
+@media (max-width: 768px) {
+  .work-section {
+    padding: 65px 0;
+  }
 
-  color:#cbd8e2;
+  .work-detail {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 50px 0;
+  }
 
-  padding:40px 0;
-}
+  .work-detail:first-child {
+    padding-top: 0;
+  }
 
-footer .container{
-  display:flex;
+  .work-image {
+    aspect-ratio: 16 / 10;
+    border-radius: 18px;
+  }
 
-  justify-content:space-between;
+  .work-content {
+    padding: 0;
+  }
 
-  align-items:center;
-}
+  .work-content h2 {
+    font-size: 27px;
+  }
 
-footer small{
-  font-size:12px;
+  .work-description {
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .work-meta {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7px;
+  }
+
+  .meta-item {
+    padding: 11px 7px;
+  }
+
+  .meta-label {
+    font-size: 9px;
+  }
+
+  .meta-value {
+    font-size: 11px;
+  }
+
+  .work-result {
+    font-size: 13px;
+  }
 }
 
 
 /* ========================================
-   TABLET
+   RESPONSIVE (VERY SMALL)
 ======================================== */
 
-@media(max-width:900px){
-
-  .work-detail{
-    gap:35px;
+@media (max-width: 400px) {
+  .work-meta {
+    grid-template-columns: 1fr;
   }
 
-  .work-meta{
-    grid-template-columns:
-      1fr;
+  .meta-item {
+    padding: 10px 12px;
   }
 
-}
-
-
-/* ========================================
-   MOBILE
-======================================== */
-
-@media(max-width:768px){
-
-  .site-header{
-    height:70px;
+  .work-content h2 {
+    font-size: 25px;
   }
-
-  .logo{
-    font-size:20px;
-  }
-
-
-  .page-hero{
-    padding:
-      50px 0 60px;
-  }
-
-
-  .work-section{
-    padding:65px 0;
-  }
-
-
-  /*
-    スマートフォンでは
-    画像 → 説明
-    の縦並び
-  */
-
-  .work-detail{
-    grid-template-columns:1fr;
-
-    gap:30px;
-
-    padding:50px 0;
-  }
-
-
-  .work-detail:first-child{
-    padding-top:0;
-  }
-
-
-  .work-image{
-    aspect-ratio:
-      16 / 10;
-
-    border-radius:18px;
-  }
-
-
-  .work-content{
-    padding:0;
-  }
-
-
-  .work-content h2{
-    font-size:27px;
-  }
-
-
-  .work-description{
-    font-size:14px;
-
-    line-height:1.9;
-  }
-
-
-  .work-meta{
-    grid-template-columns:
-      repeat(3,1fr);
-
-    gap:7px;
-  }
-
-
-  .meta-item{
-    padding:
-      11px 7px;
-  }
-
-
-  .meta-label{
-    font-size:9px;
-  }
-
-
-  .meta-value{
-    font-size:11px;
-  }
-
-
-  .work-result{
-    font-size:13px;
-  }
-
-
-  footer .container{
-    display:block;
-  }
-
-
-  footer small{
-    display:block;
-
-    margin-top:20px;
-  }
-
-}
-
-
-/* ========================================
-   VERY SMALL SCREEN
-======================================== */
-
-@media(max-width:400px){
-
-  .container{
-    width:92%;
-  }
-
-
-  .work-meta{
-    grid-template-columns:1fr;
-  }
-
-
-  .meta-item{
-    padding:
-      10px 12px;
-  }
-
-
-  .work-content h2{
-    font-size:25px;
-  }
-
 }

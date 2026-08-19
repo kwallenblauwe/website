@@ -1,244 +1,37 @@
 /* ========================================
-   RESET
-======================================== */
-
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Noto Sans JP",
-    sans-serif;
-
-  color:#17324d;
-
-  line-height:1.8;
-
-  background:#fff;
-}
-
-a{
-  text-decoration:none;
-  color:inherit;
-}
-
-.container{
-  width:min(1120px,90%);
-  margin:auto;
-}
-
-
-/* ========================================
-   HEADER
-======================================== */
-
-.site-header{
-  height:76px;
-  background:#fff;
-  border-bottom:1px solid #e5edf4;
-  position:relative;
-  z-index:1000;
-}
-
-.header-inner{
-  height:100%;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-
-
-/* LOGO */
-
-.logo{
-  font-size:22px;
-  font-weight:800;
-  color:#1476c6;
-}
-
-.logo span{
-  display:block;
-  font-size:10px;
-  letter-spacing:2px;
-  color:#8294a6;
-}
-
-
-/* ========================================
-   HAMBURGER
-======================================== */
-
-.menu-toggle{
-  width:46px;
-  height:46px;
-  border:1px solid #dce7ef;
-  background:#fff;
-  border-radius:50%;
-
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-
-  gap:5px;
-
-  cursor:pointer;
-  transition:.25s;
-
-  position:relative;
-  z-index:1100;
-}
-
-.menu-toggle:hover{
-  background:#edf7ff;
-}
-
-.menu-toggle span{
-  width:19px;
-  height:2px;
-  background:#17324d;
-  display:block;
-  transition:.3s;
-}
-
-
-/* OPEN */
-
-.menu-toggle.active span:nth-child(1){
-  transform:
-    translateY(7px)
-    rotate(45deg);
-}
-
-.menu-toggle.active span:nth-child(2){
-  opacity:0;
-}
-
-.menu-toggle.active span:nth-child(3){
-  transform:
-    translateY(-7px)
-    rotate(-45deg);
-}
-
-
-/* ========================================
-   NAVIGATION
-======================================== */
-
-.global-nav{
-  position:fixed;
-  top:0;
-  right:0;
-
-  width:100%;
-  height:100vh;
-
-  background:#fff;
-
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-
-  gap:32px;
-
-  opacity:0;
-  visibility:hidden;
-
-  transform:translateY(-15px);
-
-  transition:
-    opacity .3s ease,
-    visibility .3s ease,
-    transform .3s ease;
-
-  z-index:1050;
-}
-
-.global-nav.active{
-  opacity:1;
-  visibility:visible;
-  transform:translateY(0);
-}
-
-.global-nav a{
-  font-size:22px;
-  font-weight:700;
-  color:#17324d;
-  transition:.2s;
-}
-
-.global-nav a:hover{
-  color:#1476c6;
-}
-
-
-/* ========================================
    HERO
 ======================================== */
 
-.hero{
-  background:#edf7ff;
-  padding:80px 0;
+.hero {
+  background: #edf7ff;
+  padding: 80px 0;
 }
 
-.hero-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:60px;
-  align-items:center;
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
 }
 
-
-/*
-  HERO HEADLINE
-
-  以下の4行で固定表示
-
-  「できる」を
-  増やして、
-  未来の仕事に
-  つなげる。
-*/
-
-.hero h1{
-  font-size:clamp(30px,4vw,56px);
-  line-height:1.45;
-  margin-bottom:25px;
+.hero h1 {
+  font-size: clamp(30px, 4vw, 56px);
+  line-height: 1.45;
+  margin-bottom: 25px;
 }
 
-
-/*
-  1行ごとに表示
-*/
-
-.hero h1 .headline-line{
-  display:block;
-  white-space:nowrap;
+.hero h1 .headline-line {
+  display: block;
+  white-space: nowrap;
 }
 
-
-/*
-  青文字
-*/
-
-.hero h1 .blue-text{
-  color:#1476c6;
+.hero h1 .blue-text {
+  color: #1476c6;
 }
 
-
-.hero p{
-  color:#536b80;
-  margin-bottom:30px;
+.hero p {
+  color: #536b80;
+  margin-bottom: 30px;
 }
 
 
@@ -246,126 +39,33 @@ a{
    HERO IMAGE
 ======================================== */
 
-.hero-img{
-  width:100%;
-
-  height:
-    clamp(280px,38vw,430px);
-
-  border-radius:24px;
-  overflow:hidden;
-
-  background:
-    linear-gradient(
-      135deg,
-      #cfeaff,
-      #8cc9f2
-    );
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  position:relative;
+.hero-img {
+  width: 100%;
+  height: clamp(280px, 38vw, 430px);
+  border-radius: 24px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #cfeaff, #8cc9f2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-
-/*
-  images/hero.jpg
-
-  を読み込みます。
-*/
-
-.hero-img img{
-  width:100%;
-  height:100%;
-
-  display:block;
-
-  object-fit:cover;
-  object-position:center;
+.hero-img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
 }
 
-
-/*
-  画像がない場合の
-  ダミーテキスト
-*/
-
-.hero-img .image-placeholder{
-  position:absolute;
-
-  color:#fff;
-
-  font-weight:bold;
-  font-size:14px;
-
-  text-align:center;
-
-  pointer-events:none;
-}
-
-
-/* ========================================
-   BUTTON
-======================================== */
-
-.btn{
-  display:inline-block;
-
-  padding:14px 28px;
-
-  border-radius:50px;
-
-  background:#1476c6;
-
-  color:#fff;
-
-  font-weight:bold;
-
-  transition:.2s;
-}
-
-.btn:hover{
-  transform:translateY(-2px);
-  opacity:.9;
-}
-
-.btn.sub{
-  background:#fff;
-
-  color:#1476c6;
-
-  border:1px solid #1476c6;
-
-  margin-left:10px;
-}
-
-
-/* ========================================
-   SECTION
-======================================== */
-
-section{
-  padding:90px 0;
-}
-
-.section-title{
-  text-align:center;
-  margin-bottom:50px;
-}
-
-.section-title small{
-  color:#1476c6;
-
-  font-weight:bold;
-
-  letter-spacing:2px;
-}
-
-.section-title h2{
-  font-size:32px;
-  margin-top:8px;
+.hero-img .image-placeholder {
+  position: absolute;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  pointer-events: none;
 }
 
 
@@ -373,49 +73,38 @@ section{
    ABOUT CARDS
 ======================================== */
 
-.cards{
-  display:grid;
-  grid-template-columns:
-    repeat(3,1fr);
-
-  gap:24px;
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
-.card{
-  border:1px solid #e1ebf3;
-
-  border-radius:16px;
-
-  padding:30px;
-
-  background:#fff;
-
-  transition:.25s;
+.card {
+  border: 1px solid #e1ebf3;
+  border-radius: 16px;
+  padding: 30px;
+  background: #fff;
+  transition: .25s;
 }
 
-.card:hover{
-  transform:translateY(-5px);
-
-  box-shadow:
-    0 15px 35px
-    rgba(30,80,120,.08);
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(30, 80, 120, .08);
 }
 
-.card .icon{
-  font-size:28px;
-
-  color:#1476c6;
-
-  margin-bottom:15px;
+.card .icon {
+  font-size: 28px;
+  color: #1476c6;
+  margin-bottom: 15px;
 }
 
-.card h3{
-  margin-bottom:10px;
+.card h3 {
+  margin-bottom: 10px;
 }
 
-.card p{
-  font-size:14px;
-  color:#607487;
+.card p {
+  font-size: 14px;
+  color: #607487;
 }
 
 
@@ -423,78 +112,55 @@ section{
    WORK
 ======================================== */
 
-.work{
-  background:#f5f9fc;
+.work {
+  background: #f5f9fc;
 }
 
-.work-grid{
-  display:grid;
-
-  grid-template-columns:
-    repeat(3,1fr);
-
-  gap:18px;
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
 }
 
-.work-item{
-  background:#fff;
-
-  border-radius:12px;
-
-  padding:22px;
-
-  font-weight:bold;
-
-  border-left:4px solid #1476c6;
-
-  transition:.2s;
-
-  display:flex;
-
-  align-items:center;
-
-  gap:16px;
-
-  min-height:90px;
+.work-item {
+  background: #fff;
+  border-radius: 12px;
+  padding: 22px;
+  font-weight: bold;
+  border-left: 4px solid #1476c6;
+  transition: .2s;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 90px;
 }
 
-.work-item:hover{
-  transform:translateX(5px);
+.work-item:hover {
+  transform: translateX(5px);
 }
 
-
-/* WORK ICON */
-
-.work-icon{
-  width:48px;
-  height:48px;
-
-  flex:0 0 48px;
-
-  display:flex;
-
-  align-items:center;
-  justify-content:center;
+.work-icon {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.work-icon img{
-  max-width:100%;
-  max-height:100%;
-
-  width:auto;
-  height:auto;
-
-  object-fit:contain;
-
-  display:block;
+.work-icon img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 
-.work-text{
-  flex:1;
-
-  font-size:15px;
-
-  line-height:1.6;
+.work-text {
+  flex: 1;
+  font-size: 15px;
+  line-height: 1.6;
 }
 
 
@@ -502,366 +168,194 @@ section{
    NUMBERS
 ======================================== */
 
-.numbers{
-  background:#fff;
-
-  padding:90px 0;
+.numbers {
+  background: #fff;
+  padding: 90px 0;
 }
 
-.numbers-intro{
-  text-align:center;
-
-  margin-bottom:50px;
+.numbers-intro {
+  text-align: center;
+  margin-bottom: 50px;
 }
 
-.numbers-intro small{
-  display:block;
-
-  color:#1476c6;
-
-  font-weight:bold;
-
-  letter-spacing:2px;
-
-  margin-bottom:8px;
+.numbers-intro small {
+  display: block;
+  color: #1476c6;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
 }
 
-.numbers-intro h2{
-  font-size:
-    clamp(28px,4vw,38px);
-
-  margin-bottom:15px;
+.numbers-intro h2 {
+  font-size: clamp(28px, 4vw, 38px);
+  margin-bottom: 15px;
 }
 
-.numbers-intro p{
-  color:#607487;
-
-  font-size:15px;
+.numbers-intro p {
+  color: #607487;
+  font-size: 15px;
 }
 
-
-.numbers-grid{
-  display:grid;
-
-  grid-template-columns:
-    repeat(4,1fr);
-
-  gap:20px;
+.numbers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
-
-.number-card{
-  text-align:center;
-
-  background:#f5f9fc;
-
-  border:1px solid #e1ebf3;
-
-  border-radius:16px;
-
-  padding:35px 20px;
-
-  transition:.25s;
+.number-card {
+  text-align: center;
+  background: #f5f9fc;
+  border: 1px solid #e1ebf3;
+  border-radius: 16px;
+  padding: 35px 20px;
+  transition: .25s;
 }
 
-.number-card:hover{
-  transform:translateY(-5px);
-
-  box-shadow:
-    0 15px 35px
-    rgba(30,80,120,.08);
+.number-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(30, 80, 120, .08);
 }
 
-
-.number-value{
-  display:block;
-
-  font-size:
-    clamp(30px,4vw,48px);
-
-  line-height:1.2;
-
-  font-weight:800;
-
-  color:#1476c6;
-
-  margin-bottom:10px;
-
-  white-space:nowrap;
+.number-value {
+  display: block;
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.2;
+  font-weight: 800;
+  color: #1476c6;
+  margin-bottom: 10px;
+  white-space: nowrap;
 }
 
-.number-label{
-  display:block;
-
-  font-size:14px;
-
-  font-weight:bold;
-
-  color:#17324d;
+.number-label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  color: #17324d;
 }
 
-.number-description{
-  display:block;
-
-  font-size:12px;
-
-  color:#8294a6;
-
-  margin-top:5px;
+.number-description {
+  display: block;
+  font-size: 12px;
+  color: #8294a6;
+  margin-top: 5px;
 }
 
 
 /* ========================================
-   CTA
+   RESPONSIVE (TABLET)
 ======================================== */
 
-.cta{
-  background:#1476c6;
+@media (max-width: 900px) {
+  .hero-grid {
+    gap: 35px;
+  }
 
-  color:#fff;
+  .work-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-  text-align:center;
-
-  padding:80px 20px;
-}
-
-.cta h2{
-  font-size:30px;
-
-  margin-bottom:15px;
-}
-
-.cta .btn{
-  background:#fff;
-
-  color:#1476c6;
-
-  margin-top:20px;
+  .numbers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 
 /* ========================================
-   FOOTER
+   RESPONSIVE (MOBILE)
 ======================================== */
 
-footer{
-  background:#122b40;
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 0;
+  }
 
-  color:#cbd8e2;
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 
-  padding:40px 0;
-}
+  .hero h1 {
+    font-size: clamp(25px, 7vw, 38px);
+    line-height: 1.5;
+  }
 
-footer .container{
-  display:flex;
+  .hero h1 .headline-line {
+    white-space: nowrap;
+  }
 
-  justify-content:space-between;
+  .hero-img {
+    height: clamp(240px, 70vw, 360px);
+    border-radius: 18px;
+  }
 
-  align-items:center;
-}
+  .cards {
+    grid-template-columns: 1fr;
+  }
 
-footer small{
-  font-size:12px;
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-item {
+    min-height: 80px;
+    padding: 18px;
+  }
+
+  .work-icon {
+    width: 44px;
+    height: 44px;
+    flex-basis: 44px;
+  }
+
+  .work-text {
+    font-size: 14px;
+  }
+
+  .numbers {
+    padding: 65px 0;
+  }
+
+  .numbers-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .number-card {
+    padding: 25px 10px;
+  }
+
+  .number-value {
+    font-size: clamp(24px, 8vw, 36px);
+  }
+
+  .number-label {
+    font-size: 12px;
+  }
+
+  .number-description {
+    font-size: 10px;
+  }
 }
 
 
 /* ========================================
-   TABLET
+   RESPONSIVE (VERY SMALL)
 ======================================== */
 
-@media(max-width:900px){
-
-  .hero-grid{
-    gap:35px;
+@media (max-width: 400px) {
+  .hero h1 {
+    font-size: 24px;
   }
 
-  .work-grid{
-    grid-template-columns:
-      repeat(2,1fr);
+  .number-card {
+    padding: 22px 6px;
   }
 
-  .numbers-grid{
-    grid-template-columns:
-      repeat(2,1fr);
+  .number-value {
+    font-size: 25px;
   }
 
-}
-
-
-/* ========================================
-   MOBILE
-======================================== */
-
-@media(max-width:768px){
-
-  .site-header{
-    height:70px;
+  .number-label {
+    font-size: 11px;
   }
-
-  .logo{
-    font-size:20px;
-  }
-
-
-  .hero{
-    padding:60px 0;
-  }
-
-  .hero-grid{
-    grid-template-columns:1fr;
-
-    gap:40px;
-  }
-
-
-  /*
-    スマートフォンでも4行構成を維持
-  */
-
-  .hero h1{
-    font-size:
-      clamp(25px,7vw,38px);
-
-    line-height:1.5;
-  }
-
-  .hero h1 .headline-line{
-    white-space:nowrap;
-  }
-
-
-  .hero-img{
-    height:
-      clamp(240px,70vw,360px);
-
-    border-radius:18px;
-  }
-
-
-  .cards{
-    grid-template-columns:1fr;
-  }
-
-
-  .work-grid{
-    grid-template-columns:1fr;
-  }
-
-
-  .work-item{
-    min-height:80px;
-
-    padding:18px;
-  }
-
-
-  .work-icon{
-    width:44px;
-    height:44px;
-
-    flex-basis:44px;
-  }
-
-
-  .work-text{
-    font-size:14px;
-  }
-
-
-  .numbers{
-    padding:65px 0;
-  }
-
-
-  .numbers-grid{
-    grid-template-columns:
-      repeat(2,1fr);
-
-    gap:12px;
-  }
-
-
-  .number-card{
-    padding:
-      25px 10px;
-  }
-
-
-  .number-value{
-    font-size:
-      clamp(24px,8vw,36px);
-  }
-
-
-  .number-label{
-    font-size:12px;
-  }
-
-
-  .number-description{
-    font-size:10px;
-  }
-
-
-  section{
-    padding:65px 0;
-  }
-
-
-  .btn.sub{
-    margin-left:0;
-    margin-top:10px;
-  }
-
-
-  footer .container{
-    display:block;
-  }
-
-
-  footer small{
-    display:block;
-
-    margin-top:20px;
-  }
-
-}
-
-
-/* ========================================
-   VERY SMALL SCREEN
-======================================== */
-
-@media(max-width:400px){
-
-  .container{
-    width:92%;
-  }
-
-
-  /*
-    かなり小さい画面でも
-    4行を維持できるサイズ
-  */
-
-  .hero h1{
-    font-size:24px;
-  }
-
-
-  .number-card{
-    padding:
-      22px 6px;
-  }
-
-
-  .number-value{
-    font-size:25px;
-  }
-
-
-  .number-label{
-    font-size:11px;
-  }
-
 }
